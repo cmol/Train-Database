@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
       if current_user
         store_location
         flash[:error] = "You must be logged out to access this page"
-        redirect_to trains_url
+        redirect_to trains_path
         return false
       end
     end
@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
     def is_admin
     	unless current_user.login == "cmol"
     		flash[:error] = "You must be admin to do that"
-    		redirect_ro trains_url
+    		redirect_ro trains_path
     	end
     end
 
