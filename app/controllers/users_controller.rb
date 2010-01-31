@@ -25,11 +25,20 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = current_user
+  	if current_user.login == "cmol" && params[:id].to_i
+  		@user = User.find(params[:id])
+  	else
+    	@user = current_user
+    end
   end
   
   def update
-    @user = current_user
+    if current_user.login == "cmol" && params[:id].to_i
+  		@user = User.find(params[:id])
+  	else
+    	@user = current_user
+    end
+    
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
       redirect_to trains_path
