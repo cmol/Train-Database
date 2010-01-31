@@ -1,0 +1,19 @@
+one:
+  litra: MyString
+  train_type: MyString
+  make: MyString
+  decoder_address: MyString
+  decoder_version: MyString
+  box_number: MyString
+  owner: 1
+  price: MyString
+
+two:
+  litra: MyString
+  train_type: MyString
+  make: MyString
+  decoder_address: MyString
+  decoder_version: MyString
+  box_number: MyString
+  owner: 1
+  price: MyString

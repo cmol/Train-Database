@@ -1,0 +1,13 @@
+<% semantic_form_for @train do |form| %>
+  <% form.inputs do %>
+    <%= form.input :litra, :label => "Litra", :hint => "Fx: MZ-1401" %>
+    <%= form.input :train_type, :label => "Type", :collection => ['Lokomotiv', 'Vogn'], :include_blank => false %>
+    <%= form.input :make, :label => "Fabrikant", :hint => "Skal der være drop-down til at vælge fra her?" %>
+    <%= form.input :decoder_address, :label => "Dekoder Addresse" %>
+    <%= form.input :decoder_version, :label => "Decoder Version", :hint => "Nok bare fabrikant til at starte med" %>
+    <%= form.input :box_number, :label => "Kasse Nummer", :hint => "Nummer påsat både materiel og dertil hørende kasse" %>
+    <%= form.input :owner, :label => "Ejer", :collection => ['Martin', 'Anders', 'Claus'], :include_blank => false %>
+    <%= form.input :price, :label => "Pris", :hint => "Nok bare fabrikant til at starte med", :hint => "I DKK,-" %>
+  <% end %>
+  <%= form.buttons %>
+<% end %>

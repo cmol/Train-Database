@@ -1,0 +1,4 @@
+*~
+tmp/*
+config/database.yml
+log/*.log
