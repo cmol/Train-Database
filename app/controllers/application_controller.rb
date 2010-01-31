@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:error] = "You must be logged in to access this page"
+        flash[:error] = "Du skal være logget ind for at se denne side"
         redirect_to new_user_session_url
         return false
       end
@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:error] = "You must be logged out to access this page"
+        flash[:error] = "Du skal være logget ud for at se denne side"
         redirect_to trains_path
         return false
       end
@@ -51,7 +51,7 @@ class ApplicationController < ActionController::Base
     
     def is_admin
     	unless current_user.login == "cmol"
-    		flash[:error] = "You must be admin to do that"
+    		flash[:error] = "Du skal være administratior for at have adgang til det"
     		redirect_ro trains_path
     	end
     end

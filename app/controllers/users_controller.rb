@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "Successfully created user."
+      flash[:notice] = "Brugeren blev oprettet."
       redirect_to users_path
     else
       render :action => 'new'
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     end
     
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated user."
+      flash[:notice] = "Brugeren blev opdateret."
       redirect_to trains_path
     else
       render :action => 'edit'
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "Successfully destroyed user."
+    flash[:notice] = "Brugeren blev slettet."
     redirect_to users_url
   end
 end
