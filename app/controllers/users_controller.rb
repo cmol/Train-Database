@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
   
   def edit
-  	if current_user.login == "cmol" && params[:id].to_i
+  	if current_user.login == "cmol" && params[:id].to_i != 0
   		@user = User.find(params[:id])
   	else
     	@user = current_user
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    if current_user.login == "cmol" && params[:id].to_i
+    if current_user.login == "cmol" && params[:id].to_i != 0
   		@user = User.find(params[:id])
   	else
     	@user = current_user
