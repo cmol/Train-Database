@@ -1,4 +1,4 @@
-<% title "Tog" %>
+<% title "Materiel" %>
 
 <table>
   <tr>
@@ -22,12 +22,12 @@
       <td><%=h train.box_number %></td>
       <td><%=h train.owner %></td>
       <td>DKK <%=h train.price %></td>
-      <td><%= link_to "Vis", train %></td>
-      <td><%= link_to "Redigér", edit_train_path(train) %></td>
-      <td><%= link_to "Slet", train, :confirm => 'Er du sikker?', :method => :delete %></td>
+      <!--<td><%= link_to "Vis", train %></td>-->
+      <td><%= link_to "Redigér", edit_train_path(train), :class => "edit" %></td>
+      <td><%= link_to "Slet", train, :confirm => 'Er du sikker?', :method => :delete, :class => "delete" %></td>
     </tr>
     <% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
   <% end %>
 </table>
 
-<p><%= link_to "Nyt Tog", new_train_path %></p>
+<p><%= link_to "Nyt Materiel", new_train_path %></p>

@@ -95,8 +95,18 @@ tr.row_1 td {
 }
 
 tr.row_2 {
-	background-color: #fff;
+	background-color: #fafafa;
 }
 tr.row_2 td {
 	padding: 0px 5px 0px 5px;
+}
+
+a.delete {
+	font-size: 10px;
+	color: #f00;
+}
+
+a.edit {
+	font-size: 10px;
+	color: #333;
 }

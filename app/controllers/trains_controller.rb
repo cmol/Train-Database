@@ -16,7 +16,7 @@ class TrainsController < ApplicationController
   def create
     @train = Train.new(params[:train])
     if @train.save
-      flash[:notice] = "Toget blev oprettet."
+      flash[:notice] = "Materiellet blev oprettet."
       redirect_to trains_url
     else
       render :action => 'new'
@@ -30,7 +30,7 @@ class TrainsController < ApplicationController
   def update
     @train = Train.find(params[:id])
     if @train.update_attributes(params[:train])
-      flash[:notice] = "Toget blev opdateret."
+      flash[:notice] = "Materiellet blev opdateret."
       redirect_to trains_url
     else
       render :action => 'edit'
@@ -40,7 +40,7 @@ class TrainsController < ApplicationController
   def destroy
     @train = Train.find(params[:id])
     @train.destroy
-    flash[:notice] = "Toget blev slettet."
+    flash[:notice] = "Materiellet blev slettet."
     redirect_to trains_url
   end
 end
