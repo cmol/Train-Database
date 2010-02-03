@@ -11,8 +11,9 @@
     <th>Ejer</th>
     <th>Pris</th>
   </tr>
+  <% tr_class = "row_1" %>
   <% for train in @trains %>
-    <tr>
+    <tr class="<%= tr_class %>">
       <td><%=h train.litra %></td>
       <td><%=h train.train_type %></td>
       <td><%=h train.make %></td>
@@ -25,6 +26,7 @@
       <td><%= link_to "Redigér", edit_train_path(train) %></td>
       <td><%= link_to "Slet", train, :confirm => 'Er du sikker?', :method => :delete %></td>
     </tr>
+    <% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
   <% end %>
 </table>
 

@@ -80,7 +80,23 @@ a {
   list-style: disc;
 }
 
+/*BELOW HERE IS MY CHANGES*/
+
 #user_nav {
 	float: right;
 	font-size: 12px;
+}
+
+tr.row_1 {
+	background-color: #eee;
+}
+tr.row_1 td {
+	padding: 0px 5px 0px 5px;
+}
+
+tr.row_2 {
+	background-color: #fff;
+}
+tr.row_2 td {
+	padding: 0px 5px 0px 5px;
 }
