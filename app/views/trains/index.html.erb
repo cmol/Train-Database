@@ -12,7 +12,14 @@
     <th>Pris</th>
   </tr>
   <% tr_class = "row_1" %>
+  <% tr_type = "Lokomotiv" %>
   <% for train in @trains %>
+  
+		<% if tr_type != train.train_type %>
+			<tr class="<%= tr_class %>"><td colspan="10">-</td></tr>
+			<% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
+		<% end %>
+    
     <tr class="<%= tr_class %>">
       <td><%=h train.litra %></td>
       <td><%=h train.train_type %></td>
@@ -27,6 +34,7 @@
       <td><%= link_to "Slet", train, :confirm => 'Er du sikker?', :method => :delete, :class => "delete" %></td>
     </tr>
     <% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
+    <% tr_type = train.train_type %>
   <% end %>
 </table>
 
