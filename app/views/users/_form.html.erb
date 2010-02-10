@@ -4,6 +4,9 @@
     <%= form.input :login, :label => "Login", :hint => "Fx: cmol" %>
     <%= form.input :password, :hint => "Udfyld kun hvis du vil ændre password" %>
     <%= form.input :password_confirmation, :label => "Gentag Password", :hint => "Udfyld kun hvis du vil ændre password" %>
+    <% if current_user.admin == true -%>
+    	<%= form.input :admin, :label => "Administrator" %>
+    <% end -%>
   <% end %>
   <%= form.buttons %>
 <% end %>

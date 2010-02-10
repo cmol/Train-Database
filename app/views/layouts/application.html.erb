@@ -11,6 +11,9 @@
     	<div id="user_nav">
 				<% if current_user %>
 					<%= "Logget ind som: #{current_user.name}" %><br>
+					<% if current_user.admin == true -%>
+						<%= link_to "Admin", users_path %> |
+					<% end -%>
 					<%= link_to "Redigér Bruger", edit_user_path(:current) %> |
 					<%= link_to "Log Ud", logout_path %>
 				<% end %>

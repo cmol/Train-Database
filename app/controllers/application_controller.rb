@@ -50,9 +50,9 @@ class ApplicationController < ActionController::Base
     end
     
     def is_admin
-    	unless current_user.login == "cmol"
+    	unless current_user.admin == true
     		flash[:error] = "Du skal være administratior for at have adgang til det"
-    		redirect_ro trains_path
+    		redirect_to trains_path
     	end
     end
 
