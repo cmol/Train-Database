@@ -1,0 +1,7 @@
+<% semantic_form_for @operator do |form| %>
+  <% form.inputs do %>
+    <%= form.input :name, :label => "Navn", :hint => "DSB" %>
+    <%= form.input :full_name, :label => "Fulde Navn" => "De Danske Statsbaner" %>
+  <% end %>
+  <%= form.buttons %>
+<% end %>

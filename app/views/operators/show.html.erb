@@ -1,0 +1,17 @@
+<% title "Operatør" %>
+
+<p>
+  <strong>Navn:</strong>
+  <%=h @operator.name %>
+</p>
+<p>
+  <strong>Fulde Navn:</strong>
+  <%=h @operator.full_name %>
+</p>
+
+<p>
+  <%= link_to "Rediger", edit_operator_path(@operator) %> |
+  <%= link_to "Slet", @operator, :confirm => 'Er du sikker?', :method => :delete %> |
+  <%= link_to "Vis Alle", operators_path %> |
+  <%= link_to "Forside", root_url %>
+</p>

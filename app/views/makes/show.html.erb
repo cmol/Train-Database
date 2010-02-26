@@ -1,0 +1,13 @@
+<% title "Fabrikant" %>
+
+<p>
+  <strong>Navn:</strong>
+  <%=h @make.name %>
+</p>
+
+<p>
+  <%= link_to "Rediger", edit_make_path(@make) %> |
+  <%= link_to "Slet", @make, :confirm => 'Er du sikker?', :method => :delete %> |
+  <%= link_to "Vis Alle", makes_path %> |
+  <%= link_to "Forside", root_url %>
+</p>

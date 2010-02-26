@@ -34,8 +34,8 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:error] = "Du skal være logget ud for at se denne side"
-        redirect_to trains_path
+        # flash[:error] = "Du skal være logget ud for at se denne side" // Removed for easy acces to dashboard
+        redirect_to :controller => "dashboard", :action => "index"
         return false
       end
     end

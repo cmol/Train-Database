@@ -1,0 +1,18 @@
+<% title "Dekodere" %>
+
+<table>
+  <tr>
+    <th>Navn</th>
+  </tr>
+  <% for decoder in @decoders %>
+    <tr>
+      <td><%=h decoder.name %></td>
+      <td><%= link_to "Vis", decoder %></td>
+      <td><%= link_to "Rediger", edit_decoder_path(decoder) %></td>
+      <td><%= link_to "Slet", decoder, :confirm => 'Er du sikker?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Ny Dekoder", new_decoder_path %> |
+   <%= link_to "Forside", root_url %></p>

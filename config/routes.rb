@@ -1,4 +1,20 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :dashboard
+  
+  map.resources :lokomotive_types
+
+  map.resources :decoders
+
+  map.resources :train_lokomotives
+
+  map.resources :car_types
+
+  map.resources :makes
+
+  map.resources :operators
+
+  map.resources :train_cars
+
   map.resources :users
   map.resources :trains
   map.resource :user_session

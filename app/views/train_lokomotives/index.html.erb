@@ -1,0 +1,34 @@
+<% title "Lokomotiver" %>
+
+<table>
+  <tr>
+    <th>Operatør</th>
+    <th>Litra</th>
+    <th>Fabrikant</th>
+    <th>Type</th>
+    <th>Dekoder Addresse</th>
+    <th>Dekoder Type</th>
+    <th>Kasse Nummer</th>
+    <th>Ejer</th>
+    <th>Pris</th>
+  </tr>
+  <% for train_lokomotive in @train_lokomotives %>
+    <tr>
+      <td><%=h train_lokomotive.operator.name %></td>
+      <td><%=h train_lokomotive.lokomotive_class_name.upcase %> <%=h train_lokomotive.lokomotive_class_number %></td>
+      <td><%=h train_lokomotive.make.name %></td>
+      <td><%=h train_lokomotive.lokomotive_type.name %></td>
+      <td><%=h train_lokomotive.decoder_adderss %></td>
+      <td><%=h train_lokomotive.decoder.name %></td>
+      <td><%=h train_lokomotive.box_number %></td>
+      <td><%=h train_lokomotive.user.name %></td>
+      <td><%=h train_lokomotive.price %></td>
+      <td><%= link_to "Vis", train_lokomotive %></td>
+      <td><%= link_to "Rediger", edit_train_lokomotive_path(train_lokomotive) %></td>
+      <td><%= link_to "Slet", train_lokomotive, :confirm => 'Er du sikker?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Nyt Lokomotiv", new_train_lokomotive_path %> |
+   <%= link_to "Forside", root_url %></p>

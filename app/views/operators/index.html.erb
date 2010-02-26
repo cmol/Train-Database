@@ -1,0 +1,20 @@
+<% title "Operatører" %>
+
+<table>
+  <tr>
+    <th>Navn</th>
+    <th>Fulde Navn</th>
+  </tr>
+  <% for operator in @operators %>
+    <tr>
+      <td><%=h operator.name %></td>
+      <td><%=h operator.full_name %></td>
+      <td><%= link_to "Vis", operator %></td>
+      <td><%= link_to "Rediger", edit_operator_path(operator) %></td>
+      <td><%= link_to "Slet", operator, :confirm => 'Er du sikker?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Ny Operatør", new_operator_path %> |
+   <%= link_to "Forside", root_url %></p>

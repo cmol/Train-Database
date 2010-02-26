@@ -1,0 +1,18 @@
+<% title "Lokomotiv Typer" %>
+
+<table>
+  <tr>
+    <th>Navn</th>
+  </tr>
+  <% for lokomotive_type in @lokomotive_types %>
+    <tr>
+      <td><%=h lokomotive_type.name %></td>
+      <td><%= link_to "Vis", lokomotive_type %></td>
+      <td><%= link_to "Rediger", edit_lokomotive_type_path(lokomotive_type) %></td>
+      <td><%= link_to "Slet", lokomotive_type, :confirm => 'Er du sikker?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Ny Lokomotiv Type", new_lokomotive_type_path %> |
+   <%= link_to "Forside", root_url %></p>

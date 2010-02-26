@@ -1,0 +1,23 @@
+one:
+  operator_id: 1
+  lokomotive_class_name: MyString
+  lokomotive_class_number: MyString
+  make_id: 1
+  lokomotive_type_id: 1
+  decoder_adderss: MyString
+  decoder_id: 1
+  box_number: MyString
+  user_id: 1
+  price: 1
+
+two:
+  operator_id: 1
+  lokomotive_class_name: MyString
+  lokomotive_class_number: MyString
+  make_id: 1
+  lokomotive_type_id: 1
+  decoder_adderss: MyString
+  decoder_id: 1
+  box_number: MyString
+  user_id: 1
+  price: 1

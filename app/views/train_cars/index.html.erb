@@ -1,0 +1,32 @@
+<% title "Vogne" %>
+
+<table>
+  <tr>
+    <th>Operatør</th>
+    <th>Litra Klasse</th>
+    <th>Litra Nummer</th>
+    <th>Fabrikant</th>
+    <th>Type</th>
+    <th>Kasse Nummer</th>
+    <th>Ejer</th>
+    <th>Pris</th>
+  </tr>
+  <% for train_car in @train_cars %>
+    <tr>
+      <td><%=h train_car.operator.name %></td>
+      <td><%=h train_car.car_class_name %></td>
+      <td><%=h train_car.car_class_number %></td>
+      <td><%=h train_car.make.name %></td>
+      <td><%=h train_car.car_type.name %></td>
+      <td><%=h train_car.box_number %></td>
+      <td><%=h train_car.user.name %></td>
+      <td><%=h train_car.price %></td>
+      <td><%= link_to "Vis", train_car %></td>
+      <td><%= link_to "Rediger", edit_train_car_path(train_car) %></td>
+      <td><%= link_to "Slet", train_car, :confirm => 'Er du sikker?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Ny Vogn", new_train_car_path %> |
+   <%= link_to "Forside", root_url %></p>
