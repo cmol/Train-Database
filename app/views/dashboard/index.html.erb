@@ -11,12 +11,24 @@ Hele grunden til dette er at gøre det mere overskueligt hvad vi har, og give mu
 <br>
 /Claus - 26/2-10 18:20</p>
 
-<div id="lokomotives">
-	<h2>Lokomotiver</h2>
-	<p><%= link_to "Lokomotiv Liste", train_lokomotives_path %></p>
-</div>
+<table width="100%">
+	<tr>
+		<td id="lokomotives">
+			<h2>Lokomotiver</h2>
+			<p><%= link_to "Lokomotiv Liste", train_lokomotives_path %></p>
+			<h3>5 nyeste</h3>
+			<% for lokomotive in @lokomotives %>
+				<%= link_to lokomotive.operator.name+" "+lokomotive.lokomotive_class_name+" "+lokomotive.lokomotive_class_number, lokomotive %><br />
+			<% end %>
+		</td>
 
-<div id="cars">
-	<h2>Vogne</h2>
-	<p><%= link_to "Vogn Liste", train_cars_path %></p>
-</div>
+		<td id="cars">
+			<h2>Vogne</h2>
+			<p><%= link_to "Vogn Liste", train_cars_path %></p>
+			<h3>5 nyeste</h3>
+			<% for car in @cars %>
+				<%= link_to car.operator.name+" "+car.car_class_name+" "+car.car_class_number, car %><br />
+			<% end %>
+		</td>
+	</tr>
+</table>

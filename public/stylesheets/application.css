@@ -110,3 +110,8 @@ a.edit {
 	font-size: 10px;
 	color: #333;
 }
+
+#lokomotives, #cars {
+	width: 45%;
+	text-align: center;
+}
