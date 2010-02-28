@@ -12,10 +12,12 @@
     <th>Ejer</th>
     <th>Pris</th>
   </tr>
+  <% tr_class = "row_1" %>
   <% for train_lokomotive in @train_lokomotives %>
-    <tr>
+  	<% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
+    <tr class="<%= tr_class %>">
       <td><%=h train_lokomotive.operator.name %></td>
-      <td><%=h train_lokomotive.lokomotive_class_name.upcase %> <%=h train_lokomotive.lokomotive_class_number %></td>
+      <td><%=h train_lokomotive.lokomotive_class_name.upcase %> <%= link_to train_lokomotive.lokomotive_class_number, train_lokomotive %></td>
       <td><%=h train_lokomotive.make.name %></td>
       <td><%=h train_lokomotive.lokomotive_type.name %></td>
       <td><%=h train_lokomotive.decoder_adderss %></td>
@@ -23,9 +25,8 @@
       <td><%=h train_lokomotive.box_number %></td>
       <td><%=h train_lokomotive.user.name %></td>
       <td><%=h train_lokomotive.price %></td>
-      <td><%= link_to "Vis", train_lokomotive %></td>
-      <td><%= link_to "Rediger", edit_train_lokomotive_path(train_lokomotive) %></td>
-      <td><%= link_to "Slet", train_lokomotive, :confirm => 'Er du sikker?', :method => :delete %></td>
+      <td><%= link_to "Rediger", edit_train_lokomotive_path(train_lokomotive), :class => "edit" %></td>
+      <td><%= link_to "Slet", train_lokomotive, :confirm => 'Er du sikker?', :method => :delete, :class => "delete" %></td>
     </tr>
   <% end %>
 </table>
