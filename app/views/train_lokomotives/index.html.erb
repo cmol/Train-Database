@@ -17,7 +17,7 @@
   	<% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
     <tr class="<%= tr_class %>">
       <td><%=h train_lokomotive.operator.name %></td>
-      <td><%=h train_lokomotive.lokomotive_class_name.upcase %> <%= link_to train_lokomotive.lokomotive_class_number, train_lokomotive %></td>
+      <td><%=h train_lokomotive.lokomotive_class_name %> <%= link_to train_lokomotive.lokomotive_class_number, train_lokomotive %></td>
       <td><%=h train_lokomotive.make.name %></td>
       <td><%=h train_lokomotive.lokomotive_type.name %></td>
       <td><%=h train_lokomotive.decoder_adderss %></td>

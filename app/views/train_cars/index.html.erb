@@ -15,7 +15,7 @@
   	<% tr_class = (tr_class == "row_1") ? "row_2" : "row_1" %>
     <tr class="<%= tr_class %>">
       <td><%=h train_car.operator.name %></td>
-      <td><%=h train_car.car_class_name.upcase %> <%= link_to train_car.car_class_number, train_car %></td>
+      <td><%=h train_car.car_class_name %> <%= link_to train_car.car_class_number, train_car %></td>
       <td><%=h train_car.make.name %></td>
       <td><%=h train_car.car_type.name %></td>
       <td><%=h train_car.box_number %></td>
