@@ -1,6 +1,6 @@
 class TrainLokomotivesController < ApplicationController
   def index
-    @train_lokomotives = TrainLokomotive.all
+    @train_lokomotives = TrainLokomotive.all :include => "operator", :order => "operators.name, lokomotive_class_name, lokomotive_class_number"
   end
   
   def show
@@ -13,6 +13,7 @@ class TrainLokomotivesController < ApplicationController
   
   def create
     @train_lokomotive = TrainLokomotive.new(params[:train_lokomotive])
+    @train_lokomotive.lokomotive_class_name = @train_lokomotive.lokomotive_class_name.upcase
     if @train_lokomotive.save
       flash[:notice] = "Successfully created train lokomotive."
       redirect_to @train_lokomotive
@@ -27,6 +28,7 @@ class TrainLokomotivesController < ApplicationController
   
   def update
     @train_lokomotive = TrainLokomotive.find(params[:id])
+    @train_lokomotive.lokomotive_class_name = @train_lokomotive.lokomotive_class_name.upcase
     if @train_lokomotive.update_attributes(params[:train_lokomotive])
       flash[:notice] = "Successfully updated train lokomotive."
       redirect_to @train_lokomotive
