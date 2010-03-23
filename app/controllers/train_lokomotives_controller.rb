@@ -1,4 +1,5 @@
 class TrainLokomotivesController < ApplicationController
+  before_filter :require_user
   def index
     @train_lokomotives = TrainLokomotive.all :include => "operator", :order => "operators.name, lokomotive_class_name, lokomotive_class_number"
   end

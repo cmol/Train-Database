@@ -1,4 +1,5 @@
 class CarTypesController < ApplicationController
+  before_filter :require_user
   def index
     @car_types = CarType.all
   end

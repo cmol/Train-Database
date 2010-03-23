@@ -1,4 +1,5 @@
 class DecodersController < ApplicationController
+  before_filter :require_user
   def index
     @decoders = Decoder.all
   end

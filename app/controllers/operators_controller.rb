@@ -1,4 +1,5 @@
 class OperatorsController < ApplicationController
+  before_filter :require_user
   def index
     @operators = Operator.all
   end
