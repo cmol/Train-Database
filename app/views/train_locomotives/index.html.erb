@@ -22,15 +22,15 @@
   <tbody>
     <% @train_locomotives.each do |train_locomotive| %>
       <tr>
-        <td><%= train_locomotive.operator_id %></td>
+        <td><%= train_locomotive.operator.name %></td>
         <td><%= train_locomotive.locomotive_class_name %></td>
         <td><%= train_locomotive.locomotive_class_number %></td>
-        <td><%= train_locomotive.make_id %></td>
-        <td><%= train_locomotive.locomotive_type_id %></td>
+        <td><%= train_locomotive.make.name %></td>
+        <td><%= train_locomotive.locomotive_type.name %></td>
         <td><%= train_locomotive.box_number %></td>
-        <td><%= train_locomotive.owner_id %></td>
+        <td><%= train_locomotive.owner.name %></td>
         <td><%= train_locomotive.price %></td>
-        <td><%= train_locomotive.decoder_id %></td>
+        <td><%= train_locomotive.decoder.name %></td>
         <td><%= train_locomotive.decoder_address %></td>
         <td><%= link_to 'Show', train_locomotive %></td>
         <td><%= link_to 'Edit', edit_train_locomotive_path(train_locomotive) %></td>

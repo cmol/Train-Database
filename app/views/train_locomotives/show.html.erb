@@ -2,7 +2,7 @@
 
 <p>
   <strong>Operator:</strong>
-  <%= @train_locomotive.operator_id %>
+  <%= @train_locomotive.operator.name %>
 </p>
 
 <p>
@@ -17,12 +17,12 @@
 
 <p>
   <strong>Make:</strong>
-  <%= @train_locomotive.make_id %>
+  <%= @train_locomotive.make.name %>
 </p>
 
 <p>
   <strong>Locomotive type:</strong>
-  <%= @train_locomotive.locomotive_type_id %>
+  <%= @train_locomotive.locomotive_type.name %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @train_locomotive.owner_id %>
+  <%= @train_locomotive.owner.name %>
 </p>
 
 <p>
@@ -42,7 +42,7 @@
 
 <p>
   <strong>Decoder:</strong>
-  <%= @train_locomotive.decoder_id %>
+  <%= @train_locomotive.decoder.name %>
 </p>
 
 <p>
