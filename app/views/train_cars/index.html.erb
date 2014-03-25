@@ -20,13 +20,13 @@
   <tbody>
     <% @train_cars.each do |train_car| %>
       <tr>
-        <td><%= train_car.operator_id %></td>
+        <td><%= train_car.operator.name %></td>
         <td><%= train_car.car_class_name %></td>
         <td><%= train_car.car_class_number %></td>
-        <td><%= train_car.make_id %></td>
-        <td><%= train_car.car_type_id %></td>
+        <td><%= train_car.make.name %></td>
+        <td><%= train_car.car_type.name %></td>
         <td><%= train_car.box_number %></td>
-        <td><%= train_car.owner_id %></td>
+        <td><%= train_car.owner.name %></td>
         <td><%= train_car.price %></td>
         <td><%= link_to 'Show', train_car %></td>
         <td><%= link_to 'Edit', edit_train_car_path(train_car) %></td>
