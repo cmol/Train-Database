@@ -1,4 +1,6 @@
 TrainDatabase::Application.routes.draw do
+  resources :car_types
+
   resources :decoders
 
   resources :makes
