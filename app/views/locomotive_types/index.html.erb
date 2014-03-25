@@ -1,0 +1,27 @@
+<h1>Listing locomotive_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locomotive_types.each do |locomotive_type| %>
+      <tr>
+        <td><%= locomotive_type.name %></td>
+        <td><%= link_to 'Show', locomotive_type %></td>
+        <td><%= link_to 'Edit', edit_locomotive_type_path(locomotive_type) %></td>
+        <td><%= link_to 'Destroy', locomotive_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Locomotive type', new_locomotive_type_path %>
