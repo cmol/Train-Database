@@ -1,5 +1,0 @@
-*~
-tmp/*
-config/database.yml
-log/*.log
-db/*.sqlite3
