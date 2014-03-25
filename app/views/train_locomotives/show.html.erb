@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operator:</strong>
+  <%= @train_locomotive.operator_id %>
+</p>
+
+<p>
+  <strong>Locomotive class name:</strong>
+  <%= @train_locomotive.locomotive_class_name %>
+</p>
+
+<p>
+  <strong>Locomotive class number:</strong>
+  <%= @train_locomotive.locomotive_class_number %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @train_locomotive.make_id %>
+</p>
+
+<p>
+  <strong>Locomotive type:</strong>
+  <%= @train_locomotive.locomotive_type_id %>
+</p>
+
+<p>
+  <strong>Box number:</strong>
+  <%= @train_locomotive.box_number %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @train_locomotive.owner_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @train_locomotive.price %>
+</p>
+
+<p>
+  <strong>Decoder:</strong>
+  <%= @train_locomotive.decoder_id %>
+</p>
+
+<p>
+  <strong>Decoder address:</strong>
+  <%= @train_locomotive.decoder_address %>
+</p>
+
+<%= link_to 'Edit', edit_train_locomotive_path(@train_locomotive) %> |
+<%= link_to 'Back', train_locomotives_path %>

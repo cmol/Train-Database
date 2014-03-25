@@ -1,0 +1,1 @@
+json.extract! @train_locomotive, :id, :operator_id, :locomotive_class_name, :locomotive_class_number, :make_id, :locomotive_type_id, :box_number, :owner_id, :price, :decoder_id, :decoder_address, :created_at, :updated_at

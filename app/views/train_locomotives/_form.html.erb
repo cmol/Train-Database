@@ -1,0 +1,18 @@
+<%= semantic_form_for @train_locomotive do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :operator %>
+    <%= f.input :locomotive_class_name %>
+    <%= f.input :locomotive_class_number %>
+    <%= f.input :make %>
+    <%= f.input :locomotive_type %>
+    <%= f.input :box_number %>
+    <%= f.input :owner %>
+    <%= f.input :price %>
+    <%= f.input :decoder %>
+    <%= f.input :decoder_address %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

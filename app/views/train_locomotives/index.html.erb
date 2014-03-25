@@ -1,0 +1,45 @@
+<h1>Listing train_locomotives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Locomotive class name</th>
+      <th>Locomotive class number</th>
+      <th>Make</th>
+      <th>Locomotive type</th>
+      <th>Box number</th>
+      <th>Owner</th>
+      <th>Price</th>
+      <th>Decoder</th>
+      <th>Decoder address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @train_locomotives.each do |train_locomotive| %>
+      <tr>
+        <td><%= train_locomotive.operator_id %></td>
+        <td><%= train_locomotive.locomotive_class_name %></td>
+        <td><%= train_locomotive.locomotive_class_number %></td>
+        <td><%= train_locomotive.make_id %></td>
+        <td><%= train_locomotive.locomotive_type_id %></td>
+        <td><%= train_locomotive.box_number %></td>
+        <td><%= train_locomotive.owner_id %></td>
+        <td><%= train_locomotive.price %></td>
+        <td><%= train_locomotive.decoder_id %></td>
+        <td><%= train_locomotive.decoder_address %></td>
+        <td><%= link_to 'Show', train_locomotive %></td>
+        <td><%= link_to 'Edit', edit_train_locomotive_path(train_locomotive) %></td>
+        <td><%= link_to 'Destroy', train_locomotive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Train locomotive', new_train_locomotive_path %>
