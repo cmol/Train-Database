@@ -1,4 +1,6 @@
 TrainDatabase::Application.routes.draw do
+  resources :decoders
+
   resources :makes
 
   resources :operators
