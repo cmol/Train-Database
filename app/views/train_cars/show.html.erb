@@ -2,7 +2,7 @@
 
 <p>
   <strong>Operator:</strong>
-  <%= @train_car.operator_id %>
+  <%= @train_car.operator.name %>
 </p>
 
 <p>
@@ -17,12 +17,12 @@
 
 <p>
   <strong>Make:</strong>
-  <%= @train_car.make_id %>
+  <%= @train_car.make.name %>
 </p>
 
 <p>
   <strong>Car type:</strong>
-  <%= @train_car.car_type_id %>
+  <%= @train_car.car_type.name %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @train_car.owner_id %>
+  <%= @train_car.owner.name %>
 </p>
 
 <p>
