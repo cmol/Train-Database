@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operator:</strong>
+  <%= @train_car.operator_id %>
+</p>
+
+<p>
+  <strong>Car class name:</strong>
+  <%= @train_car.car_class_name %>
+</p>
+
+<p>
+  <strong>Car class number:</strong>
+  <%= @train_car.car_class_number %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @train_car.make_id %>
+</p>
+
+<p>
+  <strong>Car type:</strong>
+  <%= @train_car.car_type_id %>
+</p>
+
+<p>
+  <strong>Box number:</strong>
+  <%= @train_car.box_number %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @train_car.owner_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @train_car.price %>
+</p>
+
+<%= link_to 'Edit', edit_train_car_path(@train_car) %> |
+<%= link_to 'Back', train_cars_path %>

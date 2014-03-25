@@ -1,4 +1,6 @@
 TrainDatabase::Application.routes.draw do
+  resources :train_cars
+
   resources :owners
 
   resources :locomotive_types

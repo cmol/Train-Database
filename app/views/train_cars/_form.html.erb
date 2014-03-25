@@ -1,0 +1,49 @@
+<%= form_for(@train_car) do |f| %>
+  <% if @train_car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@train_car.errors.count, "error") %> prohibited this train_car from being saved:</h2>
+
+      <ul>
+      <% @train_car.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :operator_id %><br>
+    <%= f.number_field :operator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :car_class_name %><br>
+    <%= f.text_field :car_class_name %>
+  </div>
+  <div class="field">
+    <%= f.label :car_class_number %><br>
+    <%= f.text_field :car_class_number %>
+  </div>
+  <div class="field">
+    <%= f.label :make_id %><br>
+    <%= f.number_field :make_id %>
+  </div>
+  <div class="field">
+    <%= f.label :car_type_id %><br>
+    <%= f.number_field :car_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :box_number %><br>
+    <%= f.text_field :box_number %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_id %><br>
+    <%= f.number_field :owner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
