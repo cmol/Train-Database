@@ -1,21 +1,6 @@
-<%= form_for(@make) do |f| %>
-  <% if @make.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@make.errors.count, "error") %> prohibited this make from being saved:</h2>
-
-      <ul>
-      <% @make.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= semantic_form_for @make do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name, :label => "Type navn" %>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= form.actions %>
 <% end %>

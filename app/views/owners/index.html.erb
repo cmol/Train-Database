@@ -1,9 +1,9 @@
-<h1>Listing owners</h1>
+<h1>Ejere</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Navn</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @owners.each do |owner| %>
       <tr>
         <td><%= owner.name %></td>
-        <td><%= link_to 'Show', owner %></td>
-        <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
-        <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', owner %></td>
+        <td><%= link_to 'Rediger', edit_owner_path(owner) %></td>
+        <td><%= link_to 'Slet', owner, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Owner', new_owner_path %>
+<%= link_to 'Ny ejer', new_owner_path %>

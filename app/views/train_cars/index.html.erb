@@ -1,16 +1,16 @@
-<h1>Listing train_cars</h1>
+<h1>Vogne</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Operator</th>
-      <th>Car class name</th>
-      <th>Car class number</th>
-      <th>Make</th>
-      <th>Car type</th>
-      <th>Box number</th>
-      <th>Owner</th>
-      <th>Price</th>
+      <th>Operatør</th>
+      <th>Litra</th>
+      <th>Litra nummer</th>
+      <th>Fabrikat</th>
+      <th>Vogn type</th>
+      <th>Kasse nummer</th>
+      <th>Ejer</th>
+      <th>Pris</th>
       <th></th>
       <th></th>
       <th></th>
@@ -28,9 +28,9 @@
         <td><%= train_car.box_number %></td>
         <td><%= train_car.owner.name %></td>
         <td><%= train_car.price %></td>
-        <td><%= link_to 'Show', train_car %></td>
-        <td><%= link_to 'Edit', edit_train_car_path(train_car) %></td>
-        <td><%= link_to 'Destroy', train_car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', train_car %></td>
+        <td><%= link_to 'Rediger', edit_train_car_path(train_car) %></td>
+        <td><%= link_to 'Slet', train_car, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Train car', new_train_car_path %>
+<%= link_to 'Ney vogn', new_train_car_path %>

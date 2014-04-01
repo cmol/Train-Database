@@ -1,10 +1,10 @@
-<h1>Listing operators</h1>
+<h1>Operatører</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Full name</th>
+      <th>Forkortelse</th>
+      <th>Fuldt navn</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= operator.name %></td>
         <td><%= operator.full_name %></td>
-        <td><%= link_to 'Show', operator %></td>
-        <td><%= link_to 'Edit', edit_operator_path(operator) %></td>
-        <td><%= link_to 'Destroy', operator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', operator %></td>
+        <td><%= link_to 'Rediger', edit_operator_path(operator) %></td>
+        <td><%= link_to 'Slet', operator, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Operator', new_operator_path %>
+<%= link_to 'Ny operatør', new_operator_path %>

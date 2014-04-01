@@ -1,9 +1,9 @@
-<h1>Listing makes</h1>
+<h1>Fabrikater</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Navn</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @makes.each do |make| %>
       <tr>
         <td><%= make.name %></td>
-        <td><%= link_to 'Show', make %></td>
-        <td><%= link_to 'Edit', edit_make_path(make) %></td>
-        <td><%= link_to 'Destroy', make, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', make %></td>
+        <td><%= link_to 'Rediger', edit_make_path(make) %></td>
+        <td><%= link_to 'Slet', make, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Make', new_make_path %>
+<%= link_to 'Nyt fabrikat', new_make_path %>

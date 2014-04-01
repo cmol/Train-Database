@@ -9,6 +9,17 @@
 </head>
 <body>
 
+<div class="top_menu">
+  <%= link_to "Lokomotiver", train_locomotives_path %> | 
+  <%= link_to "Vogne", train_cars_path %> | 
+  <%= link_to "Dekodere", decoders_path %> | 
+  <%= link_to "Fabrikater", makes_path %> | 
+  <%= link_to "Operatører", operators_path %> | 
+  <%= link_to "Vogn typer", car_types_path %> | 
+  <%= link_to "Lokomotiv typer", locomotive_types_path %> | 
+  <%= link_to "Ejere", owners_path %>
+</div>
+
 <%= yield %>
 
 </body>

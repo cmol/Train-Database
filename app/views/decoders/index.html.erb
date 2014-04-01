@@ -1,9 +1,9 @@
-<h1>Listing decoders</h1>
+<h1>Dekodere</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Navn</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @decoders.each do |decoder| %>
       <tr>
         <td><%= decoder.name %></td>
-        <td><%= link_to 'Show', decoder %></td>
-        <td><%= link_to 'Edit', edit_decoder_path(decoder) %></td>
-        <td><%= link_to 'Destroy', decoder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', decoder %></td>
+        <td><%= link_to 'Rediger', edit_decoder_path(decoder) %></td>
+        <td><%= link_to 'Slet', decoder, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Decoder', new_decoder_path %>
+<%= link_to 'Ny dekoder', new_decoder_path %>

@@ -1,9 +1,9 @@
-<h1>Listing locomotive_types</h1>
+<h1>Lokomotivtyper</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Navn</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @locomotive_types.each do |locomotive_type| %>
       <tr>
         <td><%= locomotive_type.name %></td>
-        <td><%= link_to 'Show', locomotive_type %></td>
-        <td><%= link_to 'Edit', edit_locomotive_type_path(locomotive_type) %></td>
-        <td><%= link_to 'Destroy', locomotive_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', locomotive_type %></td>
+        <td><%= link_to 'Rediger', edit_locomotive_type_path(locomotive_type) %></td>
+        <td><%= link_to 'Slet', locomotive_type, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Locomotive type', new_locomotive_type_path %>
+<%= link_to 'Ny Lokomotivetype', new_locomotive_type_path %>

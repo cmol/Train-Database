@@ -1,54 +1,54 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Operator:</strong>
+  <strong>Operatør:</strong>
   <%= @train_locomotive.operator.name %>
 </p>
 
 <p>
-  <strong>Locomotive class name:</strong>
+  <strong>Litra:</strong>
   <%= @train_locomotive.locomotive_class_name %>
 </p>
 
 <p>
-  <strong>Locomotive class number:</strong>
+  <strong>Litra nummer:</strong>
   <%= @train_locomotive.locomotive_class_number %>
 </p>
 
 <p>
-  <strong>Make:</strong>
+  <strong>Fabrikat:</strong>
   <%= @train_locomotive.make.name %>
 </p>
 
 <p>
-  <strong>Locomotive type:</strong>
+  <strong>Lokomotive type:</strong>
   <%= @train_locomotive.locomotive_type.name %>
 </p>
 
 <p>
-  <strong>Box number:</strong>
+  <strong>Kasse nummer:</strong>
   <%= @train_locomotive.box_number %>
 </p>
 
 <p>
-  <strong>Owner:</strong>
+  <strong>Ejer:</strong>
   <%= @train_locomotive.owner.name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Pris:</strong>
   <%= @train_locomotive.price %>
 </p>
 
 <p>
-  <strong>Decoder:</strong>
+  <strong>Dekoder:</strong>
   <%= @train_locomotive.decoder.name %>
 </p>
 
 <p>
-  <strong>Decoder address:</strong>
+  <strong>Dekoder addresse:</strong>
   <%= @train_locomotive.decoder_address %>
 </p>
 
-<%= link_to 'Edit', edit_train_locomotive_path(@train_locomotive) %> |
-<%= link_to 'Back', train_locomotives_path %>
+<%= link_to 'Rediger', edit_train_locomotive_path(@train_locomotive) %> |
+<%= link_to 'Tilbage', train_locomotives_path %>

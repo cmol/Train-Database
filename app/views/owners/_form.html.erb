@@ -1,21 +1,6 @@
-<%= form_for(@owner) do |f| %>
-  <% if @owner.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
-
-      <ul>
-      <% @owner.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= semantic_form_for @owner do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name, :label => "Navn" %>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= form.actions %>
 <% end %>

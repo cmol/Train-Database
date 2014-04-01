@@ -1,18 +1,18 @@
-<h1>Listing train_locomotives</h1>
+<h1>Lokomotiver</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Operator</th>
-      <th>Locomotive class name</th>
-      <th>Locomotive class number</th>
-      <th>Make</th>
-      <th>Locomotive type</th>
-      <th>Box number</th>
-      <th>Owner</th>
-      <th>Price</th>
-      <th>Decoder</th>
-      <th>Decoder address</th>
+      <th>Operatør</th>
+      <th>Litra</th>
+      <th>Litra nummer</th>
+      <th>Fabrikat</th>
+      <th>Lokomotive type</th>
+      <th>Kasse nummer</th>
+      <th>Ejer</th>
+      <th>Pris</th>
+      <th>Dekoder</th>
+      <th>Dekoder addresse</th>
       <th></th>
       <th></th>
       <th></th>
@@ -32,9 +32,9 @@
         <td><%= train_locomotive.price %></td>
         <td><%= train_locomotive.decoder.name %></td>
         <td><%= train_locomotive.decoder_address %></td>
-        <td><%= link_to 'Show', train_locomotive %></td>
-        <td><%= link_to 'Edit', edit_train_locomotive_path(train_locomotive) %></td>
-        <td><%= link_to 'Destroy', train_locomotive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vis', train_locomotive %></td>
+        <td><%= link_to 'Rediger', edit_train_locomotive_path(train_locomotive) %></td>
+        <td><%= link_to 'Slet', train_locomotive, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Train locomotive', new_train_locomotive_path %>
+<%= link_to 'Nyt lokomotiv', new_train_locomotive_path %>

@@ -1,44 +1,44 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Operator:</strong>
+  <strong>Operatør:</strong>
   <%= @train_car.operator.name %>
 </p>
 
 <p>
-  <strong>Car class name:</strong>
+  <strong>Litra:</strong>
   <%= @train_car.car_class_name %>
 </p>
 
 <p>
-  <strong>Car class number:</strong>
+  <strong>Litra nummer:</strong>
   <%= @train_car.car_class_number %>
 </p>
 
 <p>
-  <strong>Make:</strong>
+  <strong>Fabrikat:</strong>
   <%= @train_car.make.name %>
 </p>
 
 <p>
-  <strong>Car type:</strong>
+  <strong>Vogn type:</strong>
   <%= @train_car.car_type.name %>
 </p>
 
 <p>
-  <strong>Box number:</strong>
+  <strong>Kasse nummer:</strong>
   <%= @train_car.box_number %>
 </p>
 
 <p>
-  <strong>Owner:</strong>
+  <strong>Ejer:</strong>
   <%= @train_car.owner.name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Pris:</strong>
   <%= @train_car.price %>
 </p>
 
-<%= link_to 'Edit', edit_train_car_path(@train_car) %> |
-<%= link_to 'Back', train_cars_path %>
+<%= link_to 'Rediger', edit_train_car_path(@train_car) %> |
+<%= link_to 'Tilbage', train_cars_path %>
