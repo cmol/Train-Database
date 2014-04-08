@@ -50,5 +50,10 @@
   <%= @train_locomotive.decoder_address %>
 </p>
 
+<p>
+  <strong>Billede:</strong>
+  <%= image_tag @train_locomotive.picture.url %>
+</p>
+
 <%= link_to 'Rediger', edit_train_locomotive_path(@train_locomotive) %> |
 <%= link_to 'Tilbage', train_locomotives_path %>

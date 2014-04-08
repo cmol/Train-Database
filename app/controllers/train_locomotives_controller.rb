@@ -69,6 +69,6 @@ class TrainLocomotivesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def train_locomotive_params
-      params.require(:train_locomotive).permit(:operator_id, :locomotive_class_name, :locomotive_class_number, :make_id, :locomotive_type_id, :box_number, :owner_id, :price, :decoder_id, :decoder_address)
+      params.require(:train_locomotive).permit(:operator_id, :locomotive_class_name, :locomotive_class_number, :make_id, :locomotive_type_id, :box_number, :owner_id, :price, :decoder_id, :decoder_address, :picture, :delete_image)
     end
 end

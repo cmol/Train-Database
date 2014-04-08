@@ -32,6 +32,7 @@
         <td><%= train_locomotive.price %></td>
         <td><%= train_locomotive.decoder.name %></td>
         <td><%= train_locomotive.decoder_address %></td>
+        <td><%= image_tag train_locomotive.picture.url(:tiny) %></td>
         <td><%= link_to 'Vis', train_locomotive %></td>
         <td><%= link_to 'Rediger', edit_train_locomotive_path(train_locomotive) %></td>
         <td><%= link_to 'Slet', train_locomotive, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
