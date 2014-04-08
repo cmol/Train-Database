@@ -35,6 +35,9 @@ end
 # Include formtastic gem
 gem 'formtastic'
 
+# Include paperclip
+gem "paperclip", "~> 4.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
