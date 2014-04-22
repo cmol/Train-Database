@@ -9,6 +9,7 @@ class TrainLocomotive < ActiveRecord::Base
   belongs_to :owner
 
   before_save :destroy_image?
+  before_destroy :destroy_image!
 
   def delete_image
     @delete_image ||= "0"
@@ -21,6 +22,10 @@ class TrainLocomotive < ActiveRecord::Base
 private
   def destroy_image?
     self.picture.clear if @delete_image == "1"
+  end
+
+  def destroy_image!
+    self.picture.destroy
   end
 
 end
