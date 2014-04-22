@@ -1,0 +1,2 @@
+ENV['USERNAME'] = 'username'
+ENV['PASSWD'] = 'password'

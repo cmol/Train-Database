@@ -1,18 +1,27 @@
-<% title "Fabrikater" %>
+<h1>Fabrikater</h1>
 
 <table>
-  <tr>
-    <th>Navn</th>
-  </tr>
-  <% for make in @makes %>
+  <thead>
     <tr>
-      <td><%=h make.name %></td>
-      <td><%= link_to "Vis", make %></td>
-      <td><%= link_to "Rediger", edit_make_path(make) %></td>
-      <td><%= link_to "Slet", make, :confirm => 'Er du sikker?', :method => :delete %></td>
+      <th>Navn</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
-  <% end %>
+  </thead>
+
+  <tbody>
+    <% @makes.each do |make| %>
+      <tr>
+        <td><%= make.name %></td>
+        <td><%= link_to 'Vis', make %></td>
+        <td><%= link_to 'Rediger', edit_make_path(make) %></td>
+        <td><%= link_to 'Slet', make, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<p><%= link_to "Ny Fabrikant", new_make_path %> |
-   <%= link_to "Forside", root_url %></p>
+<br>
+
+<%= link_to 'Nyt fabrikat', new_make_path %>

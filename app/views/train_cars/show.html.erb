@@ -1,41 +1,49 @@
-<% title "Vogn" %>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Operatør:</strong>
-  <%=h @train_car.operator.name %>
-</p>
-<p>
-  <strong>Litra Klasse:</strong>
-  <%=h @train_car.car_class_name %>
-</p>
-<p>
-  <strong>Litra Nummer:</strong>
-  <%=h @train_car.car_class_number %>
-</p>
-<p>
-  <strong>Fabrikant:</strong>
-  <%=h @train_car.make.name %>
-</p>
-<p>
-  <strong>Type:</strong>
-  <%=h @train_car.car_type.name %>
-</p>
-<p>
-  <strong>Kasse Nummer:</strong>
-  <%=h @train_car.box_number %>
-</p>
-<p>
-  <strong>Ejer:</strong>
-  <%=h @train_car.user.name %>
-</p>
-<p>
-  <strong>Pris:</strong>
-  <%=h @train_car.price %>
+  <%= @train_car.operator.name %>
 </p>
 
 <p>
-  <%= link_to "Rediger", edit_train_car_path(@train_car) %> |
-  <%= link_to "Slet", @train_car, :confirm => 'Er du sikker?', :method => :delete %> |
-  <%= link_to "Vogn Oversigt", train_cars_path %> |
-  <%= link_to "Forside", root_url %>
+  <strong>Litra:</strong>
+  <%= @train_car.car_class_name %>
 </p>
+
+<p>
+  <strong>Litra nummer:</strong>
+  <%= @train_car.car_class_number %>
+</p>
+
+<p>
+  <strong>Fabrikat:</strong>
+  <%= @train_car.make.name %>
+</p>
+
+<p>
+  <strong>Vogn type:</strong>
+  <%= @train_car.car_type.name %>
+</p>
+
+<p>
+  <strong>Kasse nummer:</strong>
+  <%= @train_car.box_number %>
+</p>
+
+<p>
+  <strong>Ejer:</strong>
+  <%= @train_car.owner.name %>
+</p>
+
+<p>
+  <strong>Pris:</strong>
+  <%= @train_car.price %>
+</p>
+
+<p>
+  <strong>Billede:</strong>
+  <%= image_tag @train_car.picture.url %>
+</p>
+
+<%= link_to 'Rediger', edit_train_car_path(@train_car) %> |
+<%= link_to 'Tilbage', train_cars_path %>

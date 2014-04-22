@@ -1,9 +1,6 @@
-<% title "Rediger Fabrikant" %>
+<h1>Rediger fabrikat</h1>
 
-<%= render :partial => 'form' %>
+<%= render 'form' %>
 
-<p>
-  <%= link_to "Vis", @make %> |
-  <%= link_to "Vis Alle", makes_path %> |
-  <%= link_to "Forside", root_url %>
-</p>
+<%= link_to 'Vis', @make %> |
+<%= link_to 'Tilbage', makes_path %>

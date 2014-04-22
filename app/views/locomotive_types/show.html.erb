@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Navn:</strong>
+  <%= @locomotive_type.name %>
+</p>
+
+<%= link_to 'Rediger', edit_locomotive_type_path(@locomotive_type) %> |
+<%= link_to 'Vis', locomotive_types_path %>

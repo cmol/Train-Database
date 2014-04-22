@@ -1,13 +1,9 @@
-<% title "Dekoder" %>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Navn:</strong>
-  <%=h @decoder.name %>
+  <%= @decoder.name %>
 </p>
 
-<p>
-  <%= link_to "Rediger", edit_decoder_path(@decoder) %> |
-  <%= link_to "Slet", @decoder, :confirm => 'Er du sikker?', :method => :delete %> |
-  <%= link_to "Vis Alle", decoders_path %> |
-  <%= link_to "Forside", root_url %>
-</p>
+<%= link_to 'Rediger', edit_decoder_path(@decoder) %> |
+<%= link_to 'Tilbage', decoders_path %>

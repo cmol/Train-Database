@@ -1,0 +1,27 @@
+<h1>Lokomotivtyper</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Navn</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locomotive_types.each do |locomotive_type| %>
+      <tr>
+        <td><%= locomotive_type.name %></td>
+        <td><%= link_to 'Vis', locomotive_type %></td>
+        <td><%= link_to 'Rediger', edit_locomotive_type_path(locomotive_type) %></td>
+        <td><%= link_to 'Slet', locomotive_type, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ny Lokomotivetype', new_locomotive_type_path %>

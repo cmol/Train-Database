@@ -1,32 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
-    <%= stylesheet_link_tag 'application', 'formtastic', 'formtastic_changes' %>
-    <%= yield(:head) %>
-  </head>
-  <body>
-    <div id="container">
-    	<div id="user_nav">
-				<% if current_user %>
-					<%= "Logget ind som: #{current_user.name}" %><br>
-					<% if current_user.admin == true -%>
-						<%= link_to "Admin", users_path %> |
-					<% end -%>
-					<%= link_to "Redigér Bruger", edit_user_path(:current) %> |
-					<%= link_to "Log Ud", logout_path %>
-				<% end %>
-    	</div>
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
-      
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
-      
-      <%= yield %>
-    </div>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrainDatabase</title>
+  <%= stylesheet_link_tag 'formtastic' %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="top_menu">
+  <%= link_to "Forside", root_path %> | 
+  <%= link_to "Lokomotiver", train_locomotives_path %> | 
+  <%= link_to "Vogne", train_cars_path %> | 
+  <%= link_to "Dekodere", decoders_path %> | 
+  <%= link_to "Fabrikater", makes_path %> | 
+  <%= link_to "Operatører", operators_path %> | 
+  <%= link_to "Vogn typer", car_types_path %> | 
+  <%= link_to "Lokomotiv typer", locomotive_types_path %> | 
+  <%= link_to "Ejere", owners_path %>
+</div>
+
+<%= yield %>
+
+</body>
 </html>

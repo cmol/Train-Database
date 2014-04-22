@@ -1,6 +1,6 @@
-<% semantic_form_for @make do |form| %>
-  <% form.inputs do %>
-    <%= form.input :name, :label => "Navn" %>
+<%= semantic_form_for @make do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :name, :label => "Type navn" %>
   <% end %>
-  <%= form.buttons %>
+  <%= form.actions %>
 <% end %>

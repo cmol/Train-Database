@@ -1,0 +1,47 @@
+<h1>Lokomotiver</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operatør</th>
+      <th>Litra</th>
+      <th>Litra nummer</th>
+      <th>Fabrikat</th>
+      <th>Lokomotive type</th>
+      <th>Kasse nummer</th>
+      <th>Ejer</th>
+      <th>Pris</th>
+      <th>Dekoder</th>
+      <th>Dekoder addresse</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @train_locomotives.each do |train_locomotive| %>
+      <tr>
+        <td><%= train_locomotive.operator.name %></td>
+        <td><%= train_locomotive.locomotive_class_name %></td>
+        <td><%= train_locomotive.locomotive_class_number %></td>
+        <td><%= train_locomotive.make.name %></td>
+        <td><%= train_locomotive.locomotive_type.name %></td>
+        <td><%= train_locomotive.box_number %></td>
+        <td><%= train_locomotive.owner.name %></td>
+        <td><%= train_locomotive.price %></td>
+        <td><%= train_locomotive.decoder.name %></td>
+        <td><%= train_locomotive.decoder_address %></td>
+        <td><%= image_tag train_locomotive.picture.url(:tiny) %></td>
+        <td><%= link_to 'Vis', train_locomotive %></td>
+        <td><%= link_to 'Rediger', edit_train_locomotive_path(train_locomotive) %></td>
+        <td><%= link_to 'Slet', train_locomotive, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nyt lokomotiv', new_train_locomotive_path %>

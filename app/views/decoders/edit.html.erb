@@ -1,9 +1,6 @@
-<% title "Rediger Dekoder" %>
+<h1>Rediger dekoder</h1>
 
-<%= render :partial => 'form' %>
+<%= render 'form' %>
 
-<p>
-  <%= link_to "Vis", @decoder %> |
-  <%= link_to "Vis Alle", decoders_path %> |
-  <%= link_to "Forside", root_url %>
-</p>
+<%= link_to 'Vis', @decoder %> |
+<%= link_to 'Tilbage', decoders_path %>

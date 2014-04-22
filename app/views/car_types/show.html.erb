@@ -1,13 +1,9 @@
-<% title "Vogntype" %>
+<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Navn:</strong>
-  <%=h @car_type.name %>
+  <%= @car_type.name %>
 </p>
 
-<p>
-  <%= link_to "Rediger", edit_car_type_path(@car_type) %> |
-  <%= link_to "Slet", @car_type, :confirm => 'Er du sikker?', :method => :delete %> |
-  <%= link_to "Vis Alle", car_types_path %> |
-  <%= link_to "Forside", root_url %>
-</p>
+<%= link_to 'Rediger', edit_car_type_path(@car_type) %> |
+<%= link_to 'Tilbage', car_types_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operatør:</strong>
+  <%= @train_locomotive.operator.name %>
+</p>
+
+<p>
+  <strong>Litra:</strong>
+  <%= @train_locomotive.locomotive_class_name %>
+</p>
+
+<p>
+  <strong>Litra nummer:</strong>
+  <%= @train_locomotive.locomotive_class_number %>
+</p>
+
+<p>
+  <strong>Fabrikat:</strong>
+  <%= @train_locomotive.make.name %>
+</p>
+
+<p>
+  <strong>Lokomotive type:</strong>
+  <%= @train_locomotive.locomotive_type.name %>
+</p>
+
+<p>
+  <strong>Kasse nummer:</strong>
+  <%= @train_locomotive.box_number %>
+</p>
+
+<p>
+  <strong>Ejer:</strong>
+  <%= @train_locomotive.owner.name %>
+</p>
+
+<p>
+  <strong>Pris:</strong>
+  <%= @train_locomotive.price %>
+</p>
+
+<p>
+  <strong>Dekoder:</strong>
+  <%= @train_locomotive.decoder.name %>
+</p>
+
+<p>
+  <strong>Dekoder addresse:</strong>
+  <%= @train_locomotive.decoder_address %>
+</p>
+
+<p>
+  <strong>Billede:</strong>
+  <%= image_tag @train_locomotive.picture.url %>
+</p>
+
+<%= link_to 'Rediger', edit_train_locomotive_path(@train_locomotive) %> |
+<%= link_to 'Tilbage', train_locomotives_path %>

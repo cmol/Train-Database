@@ -1,0 +1,27 @@
+<h1>Ejere</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Navn</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @owners.each do |owner| %>
+      <tr>
+        <td><%= owner.name %></td>
+        <td><%= link_to 'Vis', owner %></td>
+        <td><%= link_to 'Rediger', edit_owner_path(owner) %></td>
+        <td><%= link_to 'Slet', owner, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ny ejer', new_owner_path %>

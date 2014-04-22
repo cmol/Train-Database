@@ -1,9 +1,6 @@
-<% title "Rediger Operatør" %>
+<h1>Rediger operatør</h1>
 
-<%= render :partial => 'form' %>
+<%= render 'form' %>
 
-<p>
-  <%= link_to "Vis", @operator %> |
-  <%= link_to "Vis Alle", operators_path %> |
-  <%= link_to "Forside", root_url %>
-</p>
+<%= link_to 'Vis', @operator %> |
+<%= link_to 'Tilbage', operators_path %>

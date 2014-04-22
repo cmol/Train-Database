@@ -1,18 +1,27 @@
-<% title "Dekodere" %>
+<h1>Dekodere</h1>
 
 <table>
-  <tr>
-    <th>Navn</th>
-  </tr>
-  <% for decoder in @decoders %>
+  <thead>
     <tr>
-      <td><%=h decoder.name %></td>
-      <td><%= link_to "Vis", decoder %></td>
-      <td><%= link_to "Rediger", edit_decoder_path(decoder) %></td>
-      <td><%= link_to "Slet", decoder, :confirm => 'Er du sikker?', :method => :delete %></td>
+      <th>Navn</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
-  <% end %>
+  </thead>
+
+  <tbody>
+    <% @decoders.each do |decoder| %>
+      <tr>
+        <td><%= decoder.name %></td>
+        <td><%= link_to 'Vis', decoder %></td>
+        <td><%= link_to 'Rediger', edit_decoder_path(decoder) %></td>
+        <td><%= link_to 'Slet', decoder, method: :delete, data: { confirm: 'Er du sikker?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<p><%= link_to "Ny Dekoder", new_decoder_path %> |
-   <%= link_to "Forside", root_url %></p>
+<br>
+
+<%= link_to 'Ny dekoder', new_decoder_path %>

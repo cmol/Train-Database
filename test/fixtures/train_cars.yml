@@ -1,3 +1,5 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
 one:
   operator_id: 1
   car_class_name: MyString
@@ -5,7 +7,7 @@ one:
   make_id: 1
   car_type_id: 1
   box_number: MyString
-  user_id: 1
+  owner_id: 1
   price: 1
 
 two:
@@ -15,5 +17,5 @@ two:
   make_id: 1
   car_type_id: 1
   box_number: MyString
-  user_id: 1
+  owner_id: 1
   price: 1

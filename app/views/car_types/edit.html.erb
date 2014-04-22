@@ -1,9 +1,6 @@
-<% title "Rediger Vogntype" %>
+<h1>Rediger vogntype</h1>
 
-<%= render :partial => 'form' %>
+<%= render 'form' %>
 
-<p>
-  <%= link_to "Vis", @car_type %> |
-  <%= link_to "Vis Alle", car_types_path %> |
-  <%= link_to "Forside", root_url %>
-</p>
+<%= link_to 'Show', @car_type %> |
+<%= link_to 'Back', car_types_path %>

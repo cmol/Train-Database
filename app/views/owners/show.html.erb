@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Navn:</strong>
+  <%= @owner.name %>
+</p>
+
+<%= link_to 'Rediger', edit_owner_path(@owner) %> |
+<%= link_to 'Tilbage', owners_path %>

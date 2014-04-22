@@ -1,17 +1,14 @@
-<% title "Operatør" %>
+<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Navn:</strong>
-  <%=h @operator.name %>
-</p>
-<p>
-  <strong>Fulde Navn:</strong>
-  <%=h @operator.full_name %>
+  <strong>Forkortelse:</strong>
+  <%= @operator.name %>
 </p>
 
 <p>
-  <%= link_to "Rediger", edit_operator_path(@operator) %> |
-  <%= link_to "Slet", @operator, :confirm => 'Er du sikker?', :method => :delete %> |
-  <%= link_to "Vis Alle", operators_path %> |
-  <%= link_to "Forside", root_url %>
+  <strong>Fuldt navn:</strong>
+  <%= @operator.full_name %>
 </p>
+
+<%= link_to 'Rediger', edit_operator_path(@operator) %> |
+<%= link_to 'Tilbage', operators_path %>

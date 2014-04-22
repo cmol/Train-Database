@@ -1,59 +1,7 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
-  helper :all # include all helpers, all the time
-  protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  
-  filter_parameter_logging :password, :password_confirmation
-  helper_method :current_user_session, :current_user
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
-  
-	private
-    def current_user_session
-      return @current_user_session if defined?(@current_user_session)
-      @current_user_session = UserSession.find
-    end
-    
-    def current_user
-      return @current_user if defined?(@current_user)
-      @current_user = current_user_session && current_user_session.record
-    end
-    
-    def require_user
-      unless current_user
-        store_location
-        flash[:error] = "Du skal være logget ind for at se denne side"
-        redirect_to new_user_session_url
-        return false
-      end
-    end
- 
-    def require_no_user
-      if current_user
-        store_location
-        # flash[:error] = "Du skal være logget ud for at se denne side" // Removed for easy acces to dashboard
-        redirect_to :controller => "dashboard", :action => "index"
-        return false
-      end
-    end
-    
-    def store_location
-      session[:return_to] = request.request_uri
-    end
-    
-    def redirect_back_or_default(default)
-      redirect_to(session[:return_to] || default)
-      session[:return_to] = nil
-    end
-    
-    def is_admin
-    	unless current_user.admin == true
-    		flash[:error] = "Du skal være administratior for at have adgang til det"
-    		redirect_to trains_path
-    	end
-    end
-
+  http_basic_authenticate_with :name => ENV['USERNAME'], :password => ENV['PASSWD']
 end
