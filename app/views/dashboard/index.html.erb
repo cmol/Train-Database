@@ -1,2 +1,23 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>Materiel Database</h1>
+
+<table width="100%">
+  <tr>
+    <td id="lokomotives">
+      <h2>Lokomotiver</h2>
+      <p><%= link_to "Lokomotiv Liste", train_locomotives_path %></p>
+      <h3>5 nyeste</h3>
+      <% for locomotive in @locomotives %>
+        <%= link_to locomotive.operator.name+" "+locomotive.locomotive_class_name+" "+locomotive.locomotive_class_number, locomotive %><br />
+      <% end %>
+    </td>
+
+    <td id="cars">
+      <h2>Vogne</h2>
+      <p><%= link_to "Vogn Liste", train_cars_path %></p>
+      <h3>5 nyeste</h3>
+      <% for car in @cars %>
+        <%= link_to car.operator.name+" "+car.car_class_name+" "+car.car_class_number, car %><br />
+      <% end %>
+    </td>
+  </tr>
+</table>
