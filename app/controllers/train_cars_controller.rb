@@ -69,6 +69,6 @@ class TrainCarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def train_car_params
-      params.require(:train_car).permit(:operator_id, :car_class_name, :car_class_number, :make_id, :car_type_id, :box_number, :owner_id, :price)
+      params.require(:train_car).permit(:operator_id, :car_class_name, :car_class_number, :make_id, :car_type_id, :box_number, :owner_id, :price, :picture, :delete_image)
     end
 end

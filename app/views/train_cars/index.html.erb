@@ -14,6 +14,7 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -28,6 +29,7 @@
         <td><%= train_car.box_number %></td>
         <td><%= train_car.owner.name %></td>
         <td><%= train_car.price %></td>
+        <td><%= image_tag train_car.picture.url(:tiny) %></td>
         <td><%= link_to 'Vis', train_car %></td>
         <td><%= link_to 'Rediger', edit_train_car_path(train_car) %></td>
         <td><%= link_to 'Slet', train_car, method: :delete, data: { confirm: 'Er du sikker?' } %></td>

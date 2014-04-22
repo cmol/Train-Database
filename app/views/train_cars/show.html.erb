@@ -40,5 +40,10 @@
   <%= @train_car.price %>
 </p>
 
+<p>
+  <strong>Billede:</strong>
+  <%= image_tag @train_car.picture.url %>
+</p>
+
 <%= link_to 'Rediger', edit_train_car_path(@train_car) %> |
 <%= link_to 'Tilbage', train_cars_path %>
